@@ -34,11 +34,10 @@ class App extends Component {
                 list.push(obj);
                 this.setState({list});
                 this.setState({price: (this.state.price)+(obj.qty*obj.price)})
-                console.log(this.state.list)
+               this.setState({error:''});
             }
             else{
                this.setState({error:'invalid Value'});
-                console.log("Inavlid Value");
             }
 
         }
@@ -63,8 +62,11 @@ class App extends Component {
         let{list}=this.state;
         const updateList = list.filter((item,index)=>(index!==id));
         list=updateList;
-        this.setState({list:updateList});
-        this.totalPrice();
+        this.setState({
+            list:updateList
+        }, () => {
+            this.totalPrice();
+        });
     }
     totalPrice(){
         const {list}=this.state;
@@ -82,6 +84,7 @@ class App extends Component {
       <div>
         <Title title={'My Cart'}/>
         <Cart addFruit={(value)=>{this.addFruit(value)}} />
+          <p>{this.state.error}</p>
         <Additem passItem={this.state.list} inc={(id)=>{this.incmnt(id)}} dec={(id)=>{this.decmnt(id)}} del={(id)=>{this.del(id)}}/>
           <Total grant={this.state.price}/>
       </div>

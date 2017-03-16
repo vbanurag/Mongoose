@@ -60,3 +60,8 @@ h5{
     text-align: center;
     padding: 14px;
 }
+p{
+    margin: 0px auto;
+    text-align: center;
+    color: red;
+}

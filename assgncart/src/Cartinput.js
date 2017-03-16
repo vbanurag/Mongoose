@@ -11,16 +11,22 @@ class Cart extends Component {
     constructor(){
         super();
         this.state={
-            passValue:''
+            passValue:'',
+            default:''
         }
-        this.count=0;
+    }
+    changeHandler(e){
+        const state= this.state;
+        state[e.target.name]=e.target.value;
+        this.setState({passValue:state.default});
     }
     inputHandler(event){
-
         if(event.which==13 ){
-                this.setState({passValue: event.target.value});
-                event.target.value = "";
-                this.props.addFruit(this.state.passValue);
+                this.setState({passValue: event.target.value}, () => {
+                    this.props.addFruit(this.state.passValue);
+
+                });
+                this.setState({default:''})
         }
         else{
         }
@@ -30,7 +36,9 @@ class Cart extends Component {
     render() {
         return (
             <div className="inputCart">
-                <input className="inputBox"  type="text"  placeholder="Enter an item seprated with hyphen(-)" onKeyPress={this.inputHandler.bind(this)}  />
+                <input
+                    value={this.state.default} onChange={this.changeHandler.bind(this)} name='default'
+                    className="inputBox"  type="text"  placeholder="Enter an item seprated with hyphen(-)" onKeyPress={this.inputHandler.bind(this)}  />
             </div>
         );
     }
