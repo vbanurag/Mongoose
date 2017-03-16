@@ -1,0 +1,58 @@
+.inputCart {
+    margin: auto;
+    width:468px;
+}
+.inputBox{
+    width: 449px;
+    height: 39px;
+}
+.title{
+    color: #0000A2;
+}
+.cartTotal{
+    background-color: #01ff70;
+    text-align: left;
+    color: purple;
+    height: 41px;
+    width: 468px;
+    border-bottom-left-radius: 14px;
+    border-bottom-right-radius: 14px;
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+    margin: 0 auto;
+}
+
+.page{
+    color: peru;
+    width: 451px;
+    border: 1px solid;
+    background-color: bisque;
+    border-radius: 7px;
+    margin: 8px 430px auto;
+}
+.cart{
+
+}
+i:hover{
+    color: seagreen;
+    font-size: large;
+}
+.first{
+    width:83px;
+}
+.second{
+    width: 109px;
+}
+.third{
+    width:79px;
+}
+.fourth{
+    width:103px;
+}
+tr{
+    border: 1px solid;
+}
+.fa-times{
+    color: #85144b;
+    width:2px;
+}
