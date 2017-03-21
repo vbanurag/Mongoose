@@ -1,0 +1,106 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+h2,p{
+  font-size:100%;
+  font-weight:normal;
+}
+ul,li{
+  list-style:none;
+}
+ul{
+  overflow:hidden;
+  padding:3em;
+}
+ul li a{
+  text-decoration:none;
+  color:#000;
+  background:#CCFFDE;
+  display:block;
+  height:14em;
+  width:15em;
+  padding:1em;
+}
+ul li{
+  margin:1em;
+  float:left;
+  box-shadow: 0px 5px 40px #ccc;
+
+}
+ul li h2{
+  font-size:160%;
+  font-weight:bold;
+  padding-bottom:10px;
+  color: darkblue;
+}
+ul li p{
+  font-family:"Nova Oval",arial,sans-serif;
+  font-size:145%;
+  margin-bottom: 2px;
+}
+ul li a{
+  text-decoration:none;
+  color:#000;
+  background:#CCFFDE;
+  display:block;
+  height:14em;
+  width:15em;
+  padding:1em;
+
+}
+.editdiv{
+  display: inline-block;
+  width: 42%;
+  float: left;
+  text-align: left;
+
+}
+.deletediv{
+  width: 50%;
+  display: inline-block;
+  text-align: right;
+  float:right;
+
+}
+.header{
+  background-color: lightsalmon;
+  height: 48px;
+
+}
+h4{
+  margin-top: 0px;
+  padding-top: 14px;
+}
+
+.btn-success{
+  margin-top: 36px;
+}
+.form-inline{
+  margin-top: 23px;
+}
+
+a:hover {
+  color: black;
+  text-decoration: none;
+}
